@@ -20,7 +20,7 @@ export default {
       that.map = new AMap.Map('baseContainer', {
         mapStyle: 'amap://styles/darkblue', //设置地图的显示样式
         resizeEnable: true,
-        zoom: 15
+        zoom: 12
       })
       AMap.plugin('AMap.ToolBar', function(){//异步加载插件
         var toolbar = new AMap.ToolBar();
@@ -30,8 +30,8 @@ export default {
       console.log('地图加载失败' ,e)
     })
   },
-  destroyed() {
-    if(this.map){
+  destroyed () {
+    if (this.map) {
       this.map.destroy();
     }
   }
